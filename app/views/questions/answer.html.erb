@@ -1,0 +1,36 @@
+<div class="app-container">
+<h1>Stupid Coaching</h1>
+  <div class="border-start border-4">
+  <div class="m-2 mt-3">
+    <%= @question %>
+    <div class="ms-3"><em>-- You</em></div>
+  </div>
+</div>
+
+
+<div class="border-start border-4" id="coach-response">
+  <div class="ms-2 mt-5 pt-2 pb-2 ">
+    <% if @question.end_with?("?") %>
+        <%="Silly question, get dressed and go to work!"%>
+    <% elsif @question == "I am going to work right now!" || @question == "I am going to work right now!".upcase %>
+      <%=""%>
+    <%else%>
+      <%="I don't care, get dressed and go to work!"%>
+    <%end%>
+  <div class="ms-3"><em>-- Your coach</em></div>
+  </div>
+</div>
+
+
+ <div class="mt-5">
+  <div class="link">
+      <%= link_to "Ask a new question", ask_path %>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+</div>
